@@ -1031,6 +1031,17 @@ Descartável - POD IGNITE V50 - 5000 PUFFS - 500mAh (Recarregável) - Aloe Grape
 <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>85,00</bdi></span> </td>
 </tr>
 </tbody>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+    	var produtoEscolhido = localStorage.getItem("produtoEscolhido");
+    	if(produtoEscolhido) {
+        	document.querySelector(".product-name").innerHTML = 'Descartável - POD IGNITE V50 - 5000 PUFFS - 500mAh (Recarregável) - ' + produtoEscolhido + '&nbsp; <strong class="product-quantity">&times;&nbsp;1</strong>';
+        	localStorage.removeItem("produtoEscolhido"); // Limpa o item para evitar problemas em visitas futuras
+    	}
+	});
+</script>
+
+
 <tfoot>
 <tr class="cart-subtotal">
 <th>Subtotal</th>
@@ -1518,6 +1529,8 @@ if(document.getElementById("mp-qr-code")){
 </script>
 <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="b19bda5e6f031c08c895a890-|49" defer></script></body>
 </html>
+
+
 
 
 
